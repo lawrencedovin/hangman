@@ -12,6 +12,9 @@ while ''.join(display) != chosen_word:
     guess = input('Guess a letter: ').lower()
     while(len(guess) is not 1):
         guess = input('Should be only 1 letter, guess again: ').lower()
+    
+    while(guess in display):
+        guess = input(f'You already guessed {guess}, guess again: ').lower()
 
     if guess not in chosen_word:
         print(f'{guess} was not found')
