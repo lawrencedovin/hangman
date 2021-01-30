@@ -15,4 +15,7 @@ while(len(guess) is not 1):
     guess = input('Should be only 1 letter, guess again: ').lower()
 
 #TODO-3 - check if the letter the user guessed (guess) is on of the letters in the chosen_word.
-
+if guess in chosen_word:
+    print(f'{guess} was found')
+else:
+    print(f'{guess} was not found')
