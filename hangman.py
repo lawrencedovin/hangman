@@ -30,5 +30,9 @@ while ''.join(display) != chosen_word:
         else:
             display[index] = display[index]
     print(display)
-    print(''.join(display))
+    output = ''.join(str(char) + ' ' for char in display)
+    print(output)
+
+if ''.join(display) == chosen_word:
+    print(f'Congrats you guessed {chosen_word} corrently and won the game!')
     
